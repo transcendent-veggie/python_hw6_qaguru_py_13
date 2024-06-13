@@ -8,8 +8,6 @@ def test_dark_theme_by_time():
     current_time = time(hour=23)
     # TODO переключите темную тему в зависимости от времени суток (с 22 до 6 часов утра - ночь)
 
-    is_dark_theme = None
-
     if 22 <= current_time.hour or current_time.hour < 6:
         is_dark_theme = True
     else:
@@ -90,6 +88,7 @@ def test_find_suitable_user():
 
 def readable_function(func, *args):
     name = func.__name__.title().replace('_', ' ')
+    print(f'{name} [{", ".join(args)}]')
     return f'{name} [{", ".join(args)}]'
 
 
